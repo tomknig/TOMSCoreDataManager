@@ -68,7 +68,7 @@
 
 - (NSArray *)defaultSortDescriptors
 {
-    return @[[NSSortDescriptor sortDescriptorWithKey:[FooClass uniqueIdentifier] ascending:NO]];;
+    return @[[NSSortDescriptor sortDescriptorWithKey:[FooClass uniqueIdentifier] ascending:NO]];
 }
 
 - (NSPredicate *)defaultPredicate
