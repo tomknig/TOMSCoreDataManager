@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "TOMSIDGenerator.h"
-#import <PDKeychainBindingsController/PDKeychainBindings.h>
 #import <CommonCrypto/CommonDigest.h>
 
 #define kTOMSUUIDKey @"de.tomknig.kTOMSUUIDKey"
@@ -41,12 +40,12 @@
 {
     @synchronized([TOMSIDGenerator sharedInstance]) {
         if (!_UUID) {
-            PDKeychainBindings *keychain = [PDKeychainBindings sharedKeychainBindings];
-            _UUID = [keychain objectForKey:kTOMSUUIDKey];
+            NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+            _UUID = [userDefaults objectForKey:kTOMSUUIDKey];
             
             if (!_UUID || !_UUID.length) {
                 _UUID = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
-                [keychain setObject:_UUID forKey:kTOMSUUIDKey];
+                [userDefaults setObject:_UUID forKey:kTOMSUUIDKey];
             }
         }
         

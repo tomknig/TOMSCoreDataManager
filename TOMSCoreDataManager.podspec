@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = "TOMSCoreDataManager"
   s.version          = "0.1.0"
-  s.summary          = "TOMSCoreDataManager is an approach to simplify persistency with CoreData and an optional REST backend. TOMSCoreDataManager provides handy superclasses for your custom TableViewController or CollectionViewController implementation as well as an useful ManagedObject extension."
+  s.summary          = "TOMSCoreDataManager simplifies persistency with CoreData and an optional REST backend."
   s.homepage         = "https://github.com/TomKnig/TOMSCoreDataManager"
   s.license          = 'MIT'
   s.author           = { "TomKnig" => "hi@tomknig.de" }
