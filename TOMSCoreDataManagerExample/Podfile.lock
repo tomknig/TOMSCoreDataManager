@@ -5,10 +5,8 @@ PODS:
     - TransformerKit
   - AFNetworking (1.3.4)
   - InflectorKit (0.0.1)
-  - PDKeychainBindingsController (0.0.1)
   - TOMSCoreDataManager (0.1.0):
     - AFIncrementalStore
-    - PDKeychainBindingsController
   - TransformerKit (0.5.0):
     - TransformerKit/Core
     - TransformerKit/Cryptography
@@ -42,8 +40,7 @@ SPEC CHECKSUMS:
   AFIncrementalStore: 70ca00126363d691a2569c831eb2b016f984643b
   AFNetworking: 80c4e0652b08eb34e25b9c0ff3c82556fe5967b4
   InflectorKit: bb1f5c9feb01d17450b8bcdeb7ab1ef1832b2247
-  PDKeychainBindingsController: 529f006d0707646b2bf0c79d476acdda58a9a587
-  TOMSCoreDataManager: 90edd950bea520aee8ca2faf7c01e2e9c9bbbf53
+  TOMSCoreDataManager: 887f5c76cdf9c367318d04d9fc9570ad9ec10706
   TransformerKit: be60349177a82a0747c7fb7897c1367754d295d8
 
 COCOAPODS: 0.33.1

@@ -24,12 +24,6 @@
 #define COCOAPODS_VERSION_MINOR_InflectorKit 0
 #define COCOAPODS_VERSION_PATCH_InflectorKit 1
 
-// PDKeychainBindingsController
-#define COCOAPODS_POD_AVAILABLE_PDKeychainBindingsController
-#define COCOAPODS_VERSION_MAJOR_PDKeychainBindingsController 0
-#define COCOAPODS_VERSION_MINOR_PDKeychainBindingsController 0
-#define COCOAPODS_VERSION_PATCH_PDKeychainBindingsController 1
-
 // TOMSCoreDataManager
 #define COCOAPODS_POD_AVAILABLE_TOMSCoreDataManager
 #define COCOAPODS_VERSION_MAJOR_TOMSCoreDataManager 0
