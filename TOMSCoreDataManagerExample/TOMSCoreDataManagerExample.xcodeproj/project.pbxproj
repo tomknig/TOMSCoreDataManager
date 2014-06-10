@@ -1,0 +1,537 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8224D4AA1FBA42DC90215BF4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A00FDD483AC4D98A35C018E /* libPods.a */; };
+		A63BC8501946501200A52F81 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A63BC84F1946501200A52F81 /* main.m */; };
+		A63BC8531946501200A52F81 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A63BC8521946501200A52F81 /* AppDelegate.m */; };
+		A63BC8591946501200A52F81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A63BC8571946501200A52F81 /* Main.storyboard */; };
+		A63BC85B1946501200A52F81 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A63BC85A1946501200A52F81 /* Images.xcassets */; };
+		A63BC8671946501200A52F81 /* TOMSCoreDataManagerExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A63BC8661946501200A52F81 /* TOMSCoreDataManagerExampleTests.m */; };
+		A63BC8731946526D00A52F81 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A63BC8721946526D00A52F81 /* CollectionViewController.m */; };
+		A63BC8761946527B00A52F81 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A63BC8751946527B00A52F81 /* TableViewController.m */; };
+		A63BC87A1946538E00A52F81 /* FooModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A63BC8781946538E00A52F81 /* FooModel.xcdatamodeld */; };
+		A63BC87D1946543100A52F81 /* FooClass.m in Sources */ = {isa = PBXBuildFile; fileRef = A63BC87C1946543100A52F81 /* FooClass.m */; };
+		A6E8451119465E67003356CF /* RestClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E8451019465E67003356CF /* RestClient.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A63BC8611946501200A52F81 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A63BC8421946501200A52F81 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A63BC8491946501200A52F81;
+			remoteInfo = TOMSCoreDataManagerExample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9A00FDD483AC4D98A35C018E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1A8E9C15E7041CABA2E2F0E /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		A63BC84A1946501200A52F81 /* TOMSCoreDataManagerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TOMSCoreDataManagerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A63BC84E1946501200A52F81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A63BC84F1946501200A52F81 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A63BC8511946501200A52F81 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A63BC8521946501200A52F81 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A63BC8581946501200A52F81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A63BC85A1946501200A52F81 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A63BC8601946501200A52F81 /* TOMSCoreDataManagerExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TOMSCoreDataManagerExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A63BC8651946501200A52F81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A63BC8661946501200A52F81 /* TOMSCoreDataManagerExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TOMSCoreDataManagerExampleTests.m; sourceTree = "<group>"; };
+		A63BC8711946526D00A52F81 /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
+		A63BC8721946526D00A52F81 /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
+		A63BC8741946527B00A52F81 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		A63BC8751946527B00A52F81 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		A63BC8791946538E00A52F81 /* FooModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FooModel.xcdatamodel; sourceTree = "<group>"; };
+		A63BC87B1946543100A52F81 /* FooClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FooClass.h; sourceTree = "<group>"; };
+		A63BC87C1946543100A52F81 /* FooClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FooClass.m; sourceTree = "<group>"; };
+		A63BC87F1946555E00A52F81 /* Header.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.pch; sourceTree = "<group>"; };
+		A6E8450F19465E67003356CF /* RestClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestClient.h; sourceTree = "<group>"; };
+		A6E8451019465E67003356CF /* RestClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestClient.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A63BC8471946501200A52F81 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8224D4AA1FBA42DC90215BF4 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A63BC85D1946501200A52F81 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		42BBE18010F5472D870DCDC9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9A00FDD483AC4D98A35C018E /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A63BC8411946501200A52F81 = {
+			isa = PBXGroup;
+			children = (
+				A63BC84C1946501200A52F81 /* TOMSCoreDataManagerExample */,
+				A63BC8631946501200A52F81 /* TOMSCoreDataManagerExampleTests */,
+				A63BC84B1946501200A52F81 /* Products */,
+				A1A8E9C15E7041CABA2E2F0E /* Pods.xcconfig */,
+				42BBE18010F5472D870DCDC9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A63BC84B1946501200A52F81 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A63BC84A1946501200A52F81 /* TOMSCoreDataManagerExample.app */,
+				A63BC8601946501200A52F81 /* TOMSCoreDataManagerExampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A63BC84C1946501200A52F81 /* TOMSCoreDataManagerExample */ = {
+			isa = PBXGroup;
+			children = (
+				A6E8450E19465E48003356CF /* REST */,
+				A63BC8771946534400A52F81 /* Model */,
+				A63BC870194651C400A52F81 /* Views */,
+				A63BC8511946501200A52F81 /* AppDelegate.h */,
+				A63BC8521946501200A52F81 /* AppDelegate.m */,
+				A63BC8571946501200A52F81 /* Main.storyboard */,
+				A63BC85A1946501200A52F81 /* Images.xcassets */,
+				A63BC84D1946501200A52F81 /* Supporting Files */,
+			);
+			path = TOMSCoreDataManagerExample;
+			sourceTree = "<group>";
+		};
+		A63BC84D1946501200A52F81 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A63BC84E1946501200A52F81 /* Info.plist */,
+				A63BC84F1946501200A52F81 /* main.m */,
+				A63BC87F1946555E00A52F81 /* Header.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A63BC8631946501200A52F81 /* TOMSCoreDataManagerExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				A63BC8661946501200A52F81 /* TOMSCoreDataManagerExampleTests.m */,
+				A63BC8641946501200A52F81 /* Supporting Files */,
+			);
+			path = TOMSCoreDataManagerExampleTests;
+			sourceTree = "<group>";
+		};
+		A63BC8641946501200A52F81 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A63BC8651946501200A52F81 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A63BC870194651C400A52F81 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A63BC8711946526D00A52F81 /* CollectionViewController.h */,
+				A63BC8721946526D00A52F81 /* CollectionViewController.m */,
+				A63BC8741946527B00A52F81 /* TableViewController.h */,
+				A63BC8751946527B00A52F81 /* TableViewController.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		A63BC8771946534400A52F81 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A63BC8781946538E00A52F81 /* FooModel.xcdatamodeld */,
+				A63BC87B1946543100A52F81 /* FooClass.h */,
+				A63BC87C1946543100A52F81 /* FooClass.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		A6E8450E19465E48003356CF /* REST */ = {
+			isa = PBXGroup;
+			children = (
+				A6E8450F19465E67003356CF /* RestClient.h */,
+				A6E8451019465E67003356CF /* RestClient.m */,
+			);
+			name = REST;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A63BC8491946501200A52F81 /* TOMSCoreDataManagerExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A63BC86A1946501200A52F81 /* Build configuration list for PBXNativeTarget "TOMSCoreDataManagerExample" */;
+			buildPhases = (
+				42F15614A5ED4C368A512854 /* Check Pods Manifest.lock */,
+				A63BC8461946501200A52F81 /* Sources */,
+				A63BC8471946501200A52F81 /* Frameworks */,
+				A63BC8481946501200A52F81 /* Resources */,
+				9FF3462AF401444994B5B314 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TOMSCoreDataManagerExample;
+			productName = TOMSCoreDataManagerExample;
+			productReference = A63BC84A1946501200A52F81 /* TOMSCoreDataManagerExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A63BC85F1946501200A52F81 /* TOMSCoreDataManagerExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A63BC86D1946501200A52F81 /* Build configuration list for PBXNativeTarget "TOMSCoreDataManagerExampleTests" */;
+			buildPhases = (
+				A63BC85C1946501200A52F81 /* Sources */,
+				A63BC85D1946501200A52F81 /* Frameworks */,
+				A63BC85E1946501200A52F81 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A63BC8621946501200A52F81 /* PBXTargetDependency */,
+			);
+			name = TOMSCoreDataManagerExampleTests;
+			productName = TOMSCoreDataManagerExampleTests;
+			productReference = A63BC8601946501200A52F81 /* TOMSCoreDataManagerExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A63BC8421946501200A52F81 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = TomKnig;
+				TargetAttributes = {
+					A63BC8491946501200A52F81 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					A63BC85F1946501200A52F81 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = A63BC8491946501200A52F81;
+					};
+				};
+			};
+			buildConfigurationList = A63BC8451946501200A52F81 /* Build configuration list for PBXProject "TOMSCoreDataManagerExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A63BC8411946501200A52F81;
+			productRefGroup = A63BC84B1946501200A52F81 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A63BC8491946501200A52F81 /* TOMSCoreDataManagerExample */,
+				A63BC85F1946501200A52F81 /* TOMSCoreDataManagerExampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A63BC8481946501200A52F81 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A63BC8591946501200A52F81 /* Main.storyboard in Resources */,
+				A63BC85B1946501200A52F81 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A63BC85E1946501200A52F81 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		42F15614A5ED4C368A512854 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9FF3462AF401444994B5B314 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A63BC8461946501200A52F81 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6E8451119465E67003356CF /* RestClient.m in Sources */,
+				A63BC8531946501200A52F81 /* AppDelegate.m in Sources */,
+				A63BC87D1946543100A52F81 /* FooClass.m in Sources */,
+				A63BC87A1946538E00A52F81 /* FooModel.xcdatamodeld in Sources */,
+				A63BC8501946501200A52F81 /* main.m in Sources */,
+				A63BC8731946526D00A52F81 /* CollectionViewController.m in Sources */,
+				A63BC8761946527B00A52F81 /* TableViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A63BC85C1946501200A52F81 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A63BC8671946501200A52F81 /* TOMSCoreDataManagerExampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A63BC8621946501200A52F81 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A63BC8491946501200A52F81 /* TOMSCoreDataManagerExample */;
+			targetProxy = A63BC8611946501200A52F81 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A63BC8571946501200A52F81 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A63BC8581946501200A52F81 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A63BC8681946501200A52F81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A63BC8691946501200A52F81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A63BC86B1946501200A52F81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1A8E9C15E7041CABA2E2F0E /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = TOMSCoreDataManagerExample/Header.pch;
+				INFOPLIST_FILE = TOMSCoreDataManagerExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A63BC86C1946501200A52F81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1A8E9C15E7041CABA2E2F0E /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = TOMSCoreDataManagerExample/Header.pch;
+				INFOPLIST_FILE = TOMSCoreDataManagerExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A63BC86E1946501200A52F81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TOMSCoreDataManagerExample.app/TOMSCoreDataManagerExample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TOMSCoreDataManagerExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		A63BC86F1946501200A52F81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TOMSCoreDataManagerExample.app/TOMSCoreDataManagerExample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TOMSCoreDataManagerExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A63BC8451946501200A52F81 /* Build configuration list for PBXProject "TOMSCoreDataManagerExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A63BC8681946501200A52F81 /* Debug */,
+				A63BC8691946501200A52F81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A63BC86A1946501200A52F81 /* Build configuration list for PBXNativeTarget "TOMSCoreDataManagerExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A63BC86B1946501200A52F81 /* Debug */,
+				A63BC86C1946501200A52F81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A63BC86D1946501200A52F81 /* Build configuration list for PBXNativeTarget "TOMSCoreDataManagerExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A63BC86E1946501200A52F81 /* Debug */,
+				A63BC86F1946501200A52F81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A63BC8781946538E00A52F81 /* FooModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A63BC8791946538E00A52F81 /* FooModel.xcdatamodel */,
+			);
+			currentVersion = A63BC8791946538E00A52F81 /* FooModel.xcdatamodel */;
+			path = FooModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = A63BC8421946501200A52F81 /* Project object */;
+}

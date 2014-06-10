@@ -1,0 +1,17 @@
+//
+//  Header.pch
+//  TOMSCoreDataManagerExample
+//
+//  Created by Tom König on 09/06/14.
+//  Copyright (c) 2014 TomKnig. All rights reserved.
+//
+
+#ifndef TOMSCoreDataManagerExample_Header_pch
+#define TOMSCoreDataManagerExample_Header_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import <TOMSCoreDataManager/TOMSCoreDataManager.h>
+
+#endif
