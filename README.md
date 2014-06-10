@@ -30,12 +30,12 @@ You could import the project in a precompiled header file of your project to mak
 4. Create a subclass of either TOMSCoreData..ViewController
 5. Adopt the DataSource as described in the following:
 
-### `TableViewController` and `CollectionViewController`
+### TableViewController and CollectionViewController
 
 `TOMSCoreDataTableViewController` and `TOMSCoreDataCollectionViewController` provide a great point for your implementations to be subclasses of.
 Simply inherit from the appropriate superclass and implement the following DataSource methods:
 
-#### `modelName`
+##### modelName
 
 The modelName specifies the name of the model, that contains the displayed entities.
 
@@ -46,7 +46,7 @@ The modelName specifies the name of the model, that contains the displayed entit
 }
 ```
 
-#### `entityName`
+##### entityName
 
 The entityName specifies the entities that should be displayed by the table (or collection) view.
 Usually those entityNames are the class names of the generated NSManagedObject subclasses.
@@ -58,7 +58,7 @@ Usually those entityNames are the class names of the generated NSManagedObject s
 }
 ```
 
-#### `cellIdentifierForItemAtIndexPath:`
+##### cellIdentifierForItemAtIndexPath:
 
 The cellIdentifierForItemAtIndexPath specifies the cell identifier for one specific indexPath.
 This can be used to work with your custom styled cells from the interface builder.
@@ -71,7 +71,7 @@ This can be used to work with your custom styled cells from the interface builde
 }
 ```
 
-#### `defaultSortDescriptors` and `defaultPredicate`
+##### defaultSortDescriptors and defaultPredicate
 
 Provide `defaultSortDescriptors` and `defaultPredicate` to specify which data should be fetched if there is no custom `sortDescriptor` or `predicate` present at a time.
 
@@ -87,7 +87,7 @@ Provide `defaultSortDescriptors` and `defaultPredicate` to specify which data sh
 }
 ```
 
-#### `configureCell:forIndexPath:`
+##### configureCell:forIndexPath:
 
 This method is getting called by the superclass while setting a cell up.
 Use this method as entry point to configure the contents of a cell at a specific indexPath.
@@ -109,14 +109,14 @@ A possible implementation in a TableViewController could loke like the following
 
 ---
 
-### `TOMSCoreDataFetchController`
+### FetchController
 
 The `coreDataFetchController` is a private property of both of the preceding ViewControllers.
 It can be used to easily influence and update the visible set of Data.
 To do so you can set the `predicate`, the `sortDescriptors` or both at the same time.
 Doing so is simple, since they are properties of the `coreDataFetchController` and can be accessed through dot syntax.
 
-#### `setPredicate:`
+##### setPredicate:
 
 Setting the predicate will perform a fetch request to the database under the hood.
 The present table- or collectionView will automatically and autonomously update its content.
@@ -126,7 +126,7 @@ NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name = %@", @"Steve"
 self.coreDataResultsController.predicate = predicate;
 ```
 
-#### `setSortDescriptors:`
+##### setSortDescriptors:
 
 Setting the sortDescriptors will reorder the table- or collectionViews displayed data appropriately.
 
@@ -135,7 +135,7 @@ NSArray *sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"name" asc
 self.coreDataResultsController.sortDescriptors = sortDescriptors;
 ```
 
-#### `setPredicate:sortDescriptors:`
+##### setPredicate:sortDescriptors:
 
 Since setting the `predicate` or the `sortDescriptors` does immediately take effect, there is the following helper method to set both at the same time.
 
@@ -145,7 +145,7 @@ Since setting the `predicate` or the `sortDescriptors` does immediately take eff
 
 ---
 
-### `AFRestClient`
+### AFRestClient
 
 In order to synchronize the local database with a restful webservice, you can implement an optional DataSource method to specify your subclassed AFRestClient.
 To do so you can simply add `backingRESTClientClass` to your `TOMSCoreData*ViewController` and return the class of you implementation.
