@@ -7,7 +7,7 @@
 //
 
 #import "CollectionViewController.h"
-#import "FooClass.h"
+#import "Person.h"
 #import "RestClient.h"
 
 @implementation CollectionViewController
@@ -23,10 +23,10 @@
 
 - (void)insertRandomObject
 {
-    [FooClass toms_newObjectFromDictionary:@{
-                                             @"fooAttribute" : [NSString stringWithFormat:@"MuchRandom_%d", arc4random() % 100]
-                                             }
-                                 inContext:self.managedObjectContext];
+    Person *steve = [Person toms_newObjectFromDictionary:@{
+                                                           @"name" : [NSString stringWithFormat:@"Steve_%d", arc4random() % 100]
+                                                           }
+                                               inContext:self.managedObjectContext];
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self insertRandomObject];
@@ -41,13 +41,13 @@
     UICollectionViewCell *collectionViewCell = (UICollectionViewCell *)cell;
     NSManagedObject *object = [self.coreDataFetchController objectAtIndexPath:indexPath];
     
-    if ([object isKindOfClass:[FooClass class]]) {
-        FooClass *foo = (FooClass *)object;
+    if ([object isKindOfClass:[Person class]]) {
+        Person *person = (Person *)object;
         UILabel *textLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 5, 320, 42)];
         UILabel *detailTextLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 21, 320, 42)];
         
-        textLabel.text = foo.fooAttribute;
-        detailTextLabel.text = foo.objectId;
+        textLabel.text = person.name;
+        detailTextLabel.text = person.objectId;
         
         [collectionViewCell addSubview:textLabel];
         [collectionViewCell addSubview:detailTextLabel];
@@ -58,12 +58,12 @@
 
 - (NSString *)modelName
 {
-    return @"FooModel";
+    return @"Model";
 }
 
 - (NSString *)entityName
 {
-    return @"FooClass";
+    return @"Person";
 }
 
 - (NSString *)cellIdentifierForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -74,12 +74,12 @@
 
 - (NSArray *)defaultSortDescriptors
 {
-    return @[[NSSortDescriptor sortDescriptorWithKey:[FooClass toms_uniqueIdentifier] ascending:NO]];;
+    return @[[NSSortDescriptor sortDescriptorWithKey:[Person toms_uniqueIdentifier] ascending:NO]];;
 }
 
 - (NSPredicate *)defaultPredicate
 {
-    return [NSPredicate predicateWithFormat:@"fooAttribute.length > 0"];
+    return [NSPredicate predicateWithFormat:@"name.length > 0"];
 }
 
 #pragma mark - TOMSCoreDataViewDataSource - Optional

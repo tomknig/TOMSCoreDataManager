@@ -12,11 +12,11 @@
 		A63BC8531946501200A52F81 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A63BC8521946501200A52F81 /* AppDelegate.m */; };
 		A63BC8591946501200A52F81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A63BC8571946501200A52F81 /* Main.storyboard */; };
 		A63BC85B1946501200A52F81 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A63BC85A1946501200A52F81 /* Images.xcassets */; };
-		A63BC8671946501200A52F81 /* TOMSCoreDataManagerExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A63BC8661946501200A52F81 /* TOMSCoreDataManagerExampleTests.m */; };
 		A63BC8731946526D00A52F81 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A63BC8721946526D00A52F81 /* CollectionViewController.m */; };
 		A63BC8761946527B00A52F81 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A63BC8751946527B00A52F81 /* TableViewController.m */; };
-		A63BC87A1946538E00A52F81 /* FooModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A63BC8781946538E00A52F81 /* FooModel.xcdatamodeld */; };
-		A63BC87D1946543100A52F81 /* FooClass.m in Sources */ = {isa = PBXBuildFile; fileRef = A63BC87C1946543100A52F81 /* FooClass.m */; };
+		A63BC87A1946538E00A52F81 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A63BC8781946538E00A52F81 /* Model.xcdatamodeld */; };
+		A6470D2E19484B0E00BB3B05 /* TOMSHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A6470D2D19484B0E00BB3B05 /* TOMSHelperTests.m */; };
+		A6470D3719484B8400BB3B05 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = A6470D3619484B8400BB3B05 /* Person.m */; };
 		A6E8451119465E67003356CF /* RestClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E8451019465E67003356CF /* RestClient.m */; };
 /* End PBXBuildFile section */
 
@@ -42,15 +42,15 @@
 		A63BC85A1946501200A52F81 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A63BC8601946501200A52F81 /* TOMSCoreDataManagerExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TOMSCoreDataManagerExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A63BC8651946501200A52F81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A63BC8661946501200A52F81 /* TOMSCoreDataManagerExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TOMSCoreDataManagerExampleTests.m; sourceTree = "<group>"; };
 		A63BC8711946526D00A52F81 /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
 		A63BC8721946526D00A52F81 /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
 		A63BC8741946527B00A52F81 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		A63BC8751946527B00A52F81 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
-		A63BC8791946538E00A52F81 /* FooModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FooModel.xcdatamodel; sourceTree = "<group>"; };
-		A63BC87B1946543100A52F81 /* FooClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FooClass.h; sourceTree = "<group>"; };
-		A63BC87C1946543100A52F81 /* FooClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FooClass.m; sourceTree = "<group>"; };
+		A63BC8791946538E00A52F81 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		A63BC87F1946555E00A52F81 /* Header.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.pch; sourceTree = "<group>"; };
+		A6470D2D19484B0E00BB3B05 /* TOMSHelperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOMSHelperTests.m; sourceTree = "<group>"; };
+		A6470D3519484B8400BB3B05 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		A6470D3619484B8400BB3B05 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		A6E8450F19465E67003356CF /* RestClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestClient.h; sourceTree = "<group>"; };
 		A6E8451019465E67003356CF /* RestClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestClient.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -130,8 +130,8 @@
 		A63BC8631946501200A52F81 /* TOMSCoreDataManagerExampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				A63BC8661946501200A52F81 /* TOMSCoreDataManagerExampleTests.m */,
 				A63BC8641946501200A52F81 /* Supporting Files */,
+				A6470D2D19484B0E00BB3B05 /* TOMSHelperTests.m */,
 			);
 			path = TOMSCoreDataManagerExampleTests;
 			sourceTree = "<group>";
@@ -158,9 +158,9 @@
 		A63BC8771946534400A52F81 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A63BC8781946538E00A52F81 /* FooModel.xcdatamodeld */,
-				A63BC87B1946543100A52F81 /* FooClass.h */,
-				A63BC87C1946543100A52F81 /* FooClass.m */,
+				A63BC8781946538E00A52F81 /* Model.xcdatamodeld */,
+				A6470D3519484B8400BB3B05 /* Person.h */,
+				A6470D3619484B8400BB3B05 /* Person.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -310,8 +310,8 @@
 			files = (
 				A6E8451119465E67003356CF /* RestClient.m in Sources */,
 				A63BC8531946501200A52F81 /* AppDelegate.m in Sources */,
-				A63BC87D1946543100A52F81 /* FooClass.m in Sources */,
-				A63BC87A1946538E00A52F81 /* FooModel.xcdatamodeld in Sources */,
+				A6470D3719484B8400BB3B05 /* Person.m in Sources */,
+				A63BC87A1946538E00A52F81 /* Model.xcdatamodeld in Sources */,
 				A63BC8501946501200A52F81 /* main.m in Sources */,
 				A63BC8731946526D00A52F81 /* CollectionViewController.m in Sources */,
 				A63BC8761946527B00A52F81 /* TableViewController.m in Sources */,
@@ -322,7 +322,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A63BC8671946501200A52F81 /* TOMSCoreDataManagerExampleTests.m in Sources */,
+				A6470D2E19484B0E00BB3B05 /* TOMSHelperTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,13 +521,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		A63BC8781946538E00A52F81 /* FooModel.xcdatamodeld */ = {
+		A63BC8781946538E00A52F81 /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				A63BC8791946538E00A52F81 /* FooModel.xcdatamodel */,
+				A63BC8791946538E00A52F81 /* Model.xcdatamodel */,
 			);
-			currentVersion = A63BC8791946538E00A52F81 /* FooModel.xcdatamodel */;
-			path = FooModel.xcdatamodeld;
+			currentVersion = A63BC8791946538E00A52F81 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

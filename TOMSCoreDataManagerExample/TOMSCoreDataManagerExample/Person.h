@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
-
+#import <TOMSCoreDataManager/NSManagedObject+TOMSHelper.h>
 
 @interface Person : NSManagedObject
 

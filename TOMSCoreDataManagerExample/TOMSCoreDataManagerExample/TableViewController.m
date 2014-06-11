@@ -7,7 +7,7 @@
 //
 
 #import "TableViewController.h"
-#import "FooClass.h"
+#import "Person.h"
 #import "RestClient.h"
 
 @implementation TableViewController
@@ -23,11 +23,14 @@
 
 - (void)insertRandomObject
 {
-    [FooClass toms_newObjectFromDictionary:@{
-                                             @"fooAttribute" : [NSString stringWithFormat:@"MuchRandom_%d", arc4random() % 100]
-                                             }
-                                 inContext:self.managedObjectContext];
+    Person *steve = [Person toms_newObjectFromDictionary:@{
+                                                           @"name" : [NSString stringWithFormat:@"Steve_%d", arc4random() % 100]
+                                                           }
+                                               inContext:self.managedObjectContext];
     
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        steve.name = @"TOM";
+    });
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self insertRandomObject];
     });
@@ -41,10 +44,10 @@
     UITableViewCell *tableViewCell = (UITableViewCell *)cell;
     NSManagedObject *object = [self.coreDataFetchController objectAtIndexPath:indexPath];
     
-    if ([object isKindOfClass:[FooClass class]]) {
-        FooClass *foo = (FooClass *)object;
-        tableViewCell.textLabel.text = foo.fooAttribute;
-        tableViewCell.detailTextLabel.text = foo.objectId;
+    if ([object isKindOfClass:[Person class]]) {
+        Person *person = (Person *)object;
+        tableViewCell.textLabel.text = person.name;
+        tableViewCell.detailTextLabel.text = person.objectId;
     }
 }
 
@@ -52,12 +55,12 @@
 
 - (NSString *)modelName
 {
-    return @"FooModel";
+    return @"Model";
 }
 
 - (NSString *)entityName
 {
-    return @"FooClass";
+    return @"Person";
 }
 
 - (NSString *)cellIdentifierForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -68,12 +71,12 @@
 
 - (NSArray *)defaultSortDescriptors
 {
-    return @[[NSSortDescriptor sortDescriptorWithKey:[FooClass toms_uniqueIdentifier] ascending:NO]];
+    return @[[NSSortDescriptor sortDescriptorWithKey:[Person toms_uniqueIdentifier] ascending:NO]];
 }
 
 - (NSPredicate *)defaultPredicate
 {
-    return [NSPredicate predicateWithFormat:@"fooAttribute.length > 0"];
+    return [NSPredicate predicateWithFormat:@"name.length > 0"];
 }
 
 #pragma mark - TOMSCoreDataViewDataSource - Optional
