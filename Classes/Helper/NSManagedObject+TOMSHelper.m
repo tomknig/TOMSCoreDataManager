@@ -49,35 +49,39 @@
     
     NSString *uniqueIdentifierKey = [self toms_uniqueIdentifier];
     
-    if ([self toms_shouldAutoGenerateGloballyUniqueIdentifiers] && dictionary[uniqueIdentifierKey]) {
-        @throw [NSException exceptionWithName:@"TOMSAutogeneratableIdentifierException"
-                                       reason:[NSString stringWithFormat:@"`%@` is configured to auto generate unique Identifiers but there was a custom unique identifier of `%@` specified. This is an internal inconsistency and can be fixed by either setting `shouldAutoGenerateGloballyUniqueIdentifiers` to NO or removing the custom unique identifier from the passed dictionary.", NSStringFromClass([self class]), uniqueIdentifierKey]
-                                     userInfo:dictionary];
-    }
-    
     NSMutableDictionary *mutableInfo = [dictionary mutableCopy];
     
     if ([self toms_shouldAutoGenerateGloballyUniqueIdentifiers]) {
-        NSString *objectId = [TOMSIDGenerator uniqueIdentifier];
-        [mutableInfo setObject:objectId forKey:uniqueIdentifierKey];
+        if (!dictionary[uniqueIdentifierKey]) {
+            NSString *objectId = [TOMSIDGenerator uniqueIdentifier];
+            [mutableInfo setObject:objectId forKey:uniqueIdentifierKey];
+        } else {
+            @throw [NSException exceptionWithName:@"TOMSAutogeneratableIdentifierException"
+                                           reason:[NSString stringWithFormat:@"`%@` is configured to auto generate unique Identifiers but there was a custom unique identifier of `%@` specified. This is an internal inconsistency and can be fixed by either setting `shouldAutoGenerateGloballyUniqueIdentifiers` to NO or removing the custom unique identifier from the passed dictionary.", NSStringFromClass([self class]), uniqueIdentifierKey]
+                                         userInfo:dictionary];
+        }
     }
     
     id object = nil;
-
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%@ = %@", uniqueIdentifierKey, [mutableInfo[uniqueIdentifierKey] description]];
-    NSArray *matches = [self toms_objectsForPredicate:predicate
-                                            inContext:context];
-
-    if (!matches || ([matches count] > 1)) {
-        @throw [NSException exceptionWithName:@"TOMSFetchException"
-                                       reason:[NSString stringWithFormat:@"Could not insert object for dictionary `%@`. There was an error executing the fetch for it. Maybe its unique identifier is not as unique as it should be?", dictionary]
-                                     userInfo:dictionary];
-    } else if (![matches count]) {
+    
+    if (dictionary[uniqueIdentifierKey]) {
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%@ = %@", uniqueIdentifierKey, [mutableInfo[uniqueIdentifierKey] description]];
+        NSArray *matches = [self toms_objectsForPredicate:predicate
+                                                inContext:context];
+        
+        if (!matches || ([matches count] >= 1)) {
+            @throw [NSException exceptionWithName:@"TOMSFetchException"
+                                           reason:[NSString stringWithFormat:@"Could not insert object for dictionary `%@`. The unique identifier was either not new or there was an error executing the fetch for it. Maybe its unique identifier is not as unique as it should be?", dictionary]
+                                         userInfo:dictionary];
+        } else {
+            object = [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass([self class])
+                                                   inManagedObjectContext:context];
+        }
+    } else {
         object = [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass([self class])
                                                inManagedObjectContext:context];
-    } else {
-        object = [matches lastObject];
     }
+    
     
     for (NSString *key in mutableInfo) {
         Class propertyClass = [object toms_classOfPropertyNamed:key
