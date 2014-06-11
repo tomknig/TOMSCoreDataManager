@@ -23,10 +23,10 @@
 
 - (void)insertRandomObject
 {
-    [FooClass newObjectFromDictionary:@{
-                                        @"fooAttribute" : [NSString stringWithFormat:@"MuchRandom_%d", arc4random() % 100]
-                                        }
-                            inContext:self.managedObjectContext];
+    [FooClass toms_newObjectFromDictionary:@{
+                                             @"fooAttribute" : [NSString stringWithFormat:@"MuchRandom_%d", arc4random() % 100]
+                                             }
+                                 inContext:self.managedObjectContext];
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self insertRandomObject];
@@ -74,7 +74,7 @@
 
 - (NSArray *)defaultSortDescriptors
 {
-    return @[[NSSortDescriptor sortDescriptorWithKey:[FooClass uniqueIdentifier] ascending:NO]];;
+    return @[[NSSortDescriptor sortDescriptorWithKey:[FooClass toms_uniqueIdentifier] ascending:NO]];;
 }
 
 - (NSPredicate *)defaultPredicate

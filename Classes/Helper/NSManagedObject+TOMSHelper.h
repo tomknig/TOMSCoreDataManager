@@ -10,26 +10,26 @@
 
 @interface NSManagedObject (TOMSHelper)
 
-+ (instancetype)objectForUniqueIdentifier:(NSString *)uniqueIdentifier
-                                inContext:(NSManagedObjectContext *)context;
++ (instancetype)toms_objectForUniqueIdentifier:(NSString *)uniqueIdentifier
+                                     inContext:(NSManagedObjectContext *)context;
 
-+ (instancetype)newObjectFromDictionary:(NSDictionary *)dictionary
-                              inContext:(NSManagedObjectContext *)context;
++ (instancetype)toms_newObjectFromDictionary:(NSDictionary *)dictionary
+                                   inContext:(NSManagedObjectContext *)context;
 
-+ (instancetype)newObjectFromDictionary:(NSDictionary *)dictionary
-                              inContext:(NSManagedObjectContext *)context
-                        autoSaveContext:(BOOL)autoSave;
++ (instancetype)toms_newObjectFromDictionary:(NSDictionary *)dictionary
+                                   inContext:(NSManagedObjectContext *)context
+                             autoSaveContext:(BOOL)autoSave;
 
-+ (NSArray *)objectsForPredicate:(NSPredicate *)predicate
-                 sortDescriptors:(NSArray *)sortDescriptors
-                       inContext:(NSManagedObjectContext *)context;
++ (NSArray *)toms_objectsForPredicate:(NSPredicate *)predicate
+                      sortDescriptors:(NSArray *)sortDescriptors
+                            inContext:(NSManagedObjectContext *)context;
 
-+ (NSArray *)objectsForPredicate:(NSPredicate *)predicate
-                       inContext:(NSManagedObjectContext *)context;
++ (NSArray *)toms_objectsForPredicate:(NSPredicate *)predicate
+                            inContext:(NSManagedObjectContext *)context;
 
 //The following may be overridden
-+ (NSString *)uniqueIdentifier;
++ (NSString *)toms_uniqueIdentifier;
 
-+ (BOOL)shouldAutoGenerateGloballyUniqueIdentifiers;
++ (BOOL)toms_shouldAutoGenerateGloballyUniqueIdentifiers;
 
 @end
