@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "TOMSCoreDataManager"
-  s.version          = "0.1.1"
+  s.version          = "0.1.2"
   s.summary          = "Comfortable persistency with CoreData integrated views plus support for an optional RESTful backend."
   s.homepage         = "https://github.com/TomKnig/TOMSCoreDataManager"
   s.license          = 'MIT'

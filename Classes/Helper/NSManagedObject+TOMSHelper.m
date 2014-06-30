@@ -65,14 +65,19 @@
     id object = nil;
     
     if (dictionary[uniqueIdentifierKey]) {
-        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%@ = %@", uniqueIdentifierKey, [mutableInfo[uniqueIdentifierKey] description]];
-        NSArray *matches = [self toms_objectsForPredicate:predicate
-                                                inContext:context];
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K = %@", uniqueIdentifierKey, [mutableInfo[uniqueIdentifierKey] description]];
         
-        if (!matches || ([matches count] >= 1)) {
+        NSArray *sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:uniqueIdentifierKey
+                                                                   ascending:YES]];
+        NSArray *matches = [self toms_objectsForPredicate:predicate
+                                          sortDescriptors:sortDescriptors
+                                                inContext:context];
+        if (!matches || ([matches count] > 1)) {
             @throw [NSException exceptionWithName:@"TOMSFetchException"
                                            reason:[NSString stringWithFormat:@"Could not insert object for dictionary `%@`. The unique identifier was either not new or there was an error executing the fetch for it. Maybe its unique identifier is not as unique as it should be?", dictionary]
                                          userInfo:dictionary];
+        } else  if ([matches count] == 1) {
+            object = [matches lastObject];
         } else {
             object = [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass([self class])
                                                    inManagedObjectContext:context];
@@ -142,7 +147,7 @@
                           matchingValue:(NSString *)value
                               inContext:(NSManagedObjectContext *)context
 {
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%@ = %@", attribute, [value description]];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K = %@", attribute, [value description]];
     NSArray *matches = [self toms_objectsForPredicate:predicate
                                             inContext:context];
     
