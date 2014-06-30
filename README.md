@@ -11,7 +11,7 @@ it, simply add the following line to your Podfile:
 
 ```ruby
 platform :ios, '7.0'
-pod "TOMSCoreDataManager", "~> 0.1.2"
+pod "TOMSCoreDataManager", "~> 0.1.3"
 ```
 
 #### Xcode Project .pch file
