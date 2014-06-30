@@ -24,6 +24,12 @@
     [self.coreDataFetchController viewDidAppear];
 }
 
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    [self.coreDataFetchController viewDidDisappear];
+}
+
 #pragma mark - Properties
 
 - (NSManagedObjectContext *)managedObjectContext

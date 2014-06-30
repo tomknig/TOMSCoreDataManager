@@ -64,6 +64,11 @@
     }
 }
 
+- (void)viewDidDisappear
+{
+    self.fetchedResultsController.delegate = nil;
+}
+
 #pragma mark - Fetching
 
 - (void)setPredicate:(NSPredicate *)aPredicate
@@ -415,9 +420,14 @@
     if (self.isCollectionViewReloadable) {
         [self.collectionViewController.collectionView reloadData];
     } else {
-        [self.collectionViewController.collectionView performBatchUpdates:^{
-            [self.collectionViewBlockOperation start];
-        } completion:nil];
+        @try {
+            [self.collectionViewController.collectionView performBatchUpdates:^{
+                [self.collectionViewBlockOperation start];
+            } completion:nil];
+        }
+        @catch (NSException *exception) {
+            [self.collectionViewController.collectionView reloadData];
+        }
     }
 }
 

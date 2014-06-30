@@ -25,6 +25,7 @@
 - (id)initWithTableViewController:(TOMSCoreDataTableViewController *)tableViewController;
 - (id)initWithCollectionViewController:(TOMSCoreDataCollectionViewController *)collectionViewController;
 - (void)viewDidAppear;
+- (void)viewDidDisappear;
 
 - (id)objectAtIndexPath:(NSIndexPath *)indexPath;
 - (NSInteger)numberOfRowsInSection:(NSInteger)section;
