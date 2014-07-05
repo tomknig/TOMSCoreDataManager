@@ -58,6 +58,8 @@
 
 - (void)viewDidAppear
 {
+    self.fetchedResultsController.delegate = self;
+    
     if (!self.isDataFetchedOnAppearance) {
         self.dataFetchedOnAppearance = YES;
         [self performFetchRequest];
@@ -239,7 +241,6 @@
                                                                         managedObjectContext:context
                                                                           sectionNameKeyPath:nil
                                                                                    cacheName:nil];
-        _fetchedResultsController.delegate = self;
     }
     return _fetchedResultsController;
 }
@@ -417,16 +418,18 @@
 
 - (void)didChangeContentInCollectionView
 {
-    if (self.isCollectionViewReloadable) {
-        [self.collectionViewController.collectionView reloadData];
-    } else {
-        @try {
-            [self.collectionViewController.collectionView performBatchUpdates:^{
-                [self.collectionViewBlockOperation start];
-            } completion:nil];
-        }
-        @catch (NSException *exception) {
+    @synchronized (self.collectionViewController.collectionView) {
+        if (self.isCollectionViewReloadable) {
             [self.collectionViewController.collectionView reloadData];
+        } else {
+            @try {
+                [self.collectionViewController.collectionView performBatchUpdates:^{
+                    [self.collectionViewBlockOperation start];
+                } completion:nil];
+            }
+            @catch (NSException *exception) {
+                [self.collectionViewController.collectionView reloadData];
+            }
         }
     }
 }
