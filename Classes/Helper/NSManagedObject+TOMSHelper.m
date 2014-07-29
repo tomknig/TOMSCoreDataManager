@@ -135,7 +135,7 @@
 + (NSArray *)toms_objectsForPredicate:(NSPredicate *)predicate
                             inContext:(NSManagedObjectContext *)context
 {
-    NSArray *sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"objectId" ascending:YES]];
+    NSArray *sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:[self toms_uniqueIdentifier] ascending:YES]];
     return [self toms_objectsForPredicate:predicate
                           sortDescriptors:sortDescriptors
                                 inContext:context];
